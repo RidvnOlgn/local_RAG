@@ -4,7 +4,8 @@ from langchain.chains import RetrievalQA
 from langchain_community.document_loaders import PyPDFLoader
 #from langchain.embeddings import HuggingFaceEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain.llms import GPT4All
+#from langchain.llms import GPT4All
+from langchain_community.llms import GPT4All
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 #from langchain.vectorstores import Chroma
 from langchain_chroma import Chroma
