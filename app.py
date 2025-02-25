@@ -2,9 +2,11 @@
 
 from langchain.chains import RetrievalQA
 from langchain_community.document_loaders import PyPDFLoader
+#from langchain.embeddings import HuggingFaceEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_community.llms import GPT4All
+from langchain.llms import GPT4All
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+#from langchain.vectorstores import Chroma
 from langchain_chroma import Chroma
 from langchain.prompts import PromptTemplate
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
@@ -84,7 +86,9 @@ def main():
     texts = chunking(knowledgeBase)
 
     # embedings model name
-    model_name = "google-bert/bert-base-uncased"
+    #model_name = "google-bert/bert-base-uncased"
+    #model_name = "sentence-transformers/all-roberta-large-v1"
+    model_name = "sentence-transformers/msmarco-bert-base-dot-v5"
 
     #DB name
     db_name = "chroma_db_wizard"
